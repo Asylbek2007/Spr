@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1E90FF 0%, #4169E1 50%, #0066CC 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.main-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1E90FF, #0066CC);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-text {
+    color: #1E90FF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background: #1E90FF;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.hero-section {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 50px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+    color: #1E90FF;
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    color: #666;
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+
+.tournament-info {
+    background: rgba(30, 144, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    color: #1E90FF;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h2 {
+    color: #1E90FF;
+    margin-bottom: 30px;
+    font-size: 2em;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #1E90FF;
+}
+
+.news-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.news-section h2 {
+    color: #1E90FF;
+    margin-bottom: 30px;
+    font-size: 2em;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #1E90FF;
+    text-align: center;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.news-item {
+    background: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(30, 144, 255, 0.2);
+    border-color: #1E90FF;
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #1E90FF, #0066CC);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-image-placeholder {
+    background: linear-gradient(135deg, #1E90FF, #0066CC);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-title {
+    color: #1E90FF;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.news-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more-btn {
+    background: linear-gradient(135deg, #1E90FF, #0066CC);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 144, 255, 0.4);
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+}
+
+.error {
+    background: #ff6b6b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 5px solid #1E90FF;
+    transition: all 0.3s ease;
+}
+
+.leaderboard-item:hover {
+    background: rgba(30, 144, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.team-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+.points {
+    background: linear-gradient(135deg, #1E90FF, #0066CC);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.match-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.match-result:hover {
+    background: rgba(30, 144, 255, 0.15);
+}
+
+.team {
+    text-align: center;
+    flex: 1;
+    font-weight: 500;
+}
+
+.score {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #1E90FF;
+    margin: 0 30px;
+}
+
+.form-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1E90FF;
+    box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.1);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #1E90FF, #0066CC);
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.4);
+}
+
+.submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.status-badge {
+    background: #28a745;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.success-message {
+    background: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 2.2em;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .news-section {
+        padding: 30px 20px;
+    }
+}

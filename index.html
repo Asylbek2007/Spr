@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIHC Spring Cup 25 - Tournament</title>
+    <link rel="shortcut icon"
+        href="https://cloudt.edupage.org/cloud?z%3A70U%2FquNqCvqM7zgwmp%2F3hb8LWBFXwCHVs30EudoTmscW4cphK4fh9X3ulOX4MliQgAeloCJQPqYU0wUTr%2BuQwN20TB4AtiTiIj%2FVFzFI3QbH5Gc3%2B8GVwrvnWw0JBglb"
+        type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo"><img src="assets/jihc_logo.jpeg" alt=""></div>
+                <div class="logo-text">Spring Cup 25</div>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#standings">Standings</a></li>
+                    <li><a href="#matches">Matches</a></li>
+                    <li><a href="#register">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero-section" id="home">
+            <h1 class="hero-title">JIHC Spring Cup 25</h1>
+            <p class="hero-subtitle">Jambyl Innovation High College Tournament</p>
+            <div class="tournament-info">
+                📅 April 7, 2025 - May 20, 2025 | 📍 Taraz, JIHC STADIUM<br>
+                ⚽ 11 Teams Competing | 🏆 Championship Trophy
+            </div>
+        </section>
+
+        <section class="news-section" id="news">
+            <h2>📰 Latest News & Updates</h2>
+            <div class="news-grid" id="news-content">
+
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <div class="card" id="standings">
+                <h2>🏆 Current Standings</h2>
+                <div id="leaderboard-content">
+                    <div class="loading">Loading standings...</div>
+                </div>
+            </div>
+
+            <div class="card" id="matches">
+                <h2>⚽ Latest Results</h2>
+                <div id="matches-content">
+                    <div class="loading">Loading matches...</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="form-section" id="register">
+            <h2 style="color: #1E90FF; margin-bottom: 30px; font-size: 2em;">📝 Tournament Registration</h2>
+            <div id="form-messages"></div>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="teamName">Team Name *</label>
+                    <input type="text" id="teamName" name="teamName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="captainName">Captain Name *</label>
+                    <input type="text" id="captainName" name="captainName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="playerCount">Number of Players *</label>
+                    <select id="playerCount" name="playerCount" required>
+                        <option value="">Select number of players...</option>
+                        <option value="11">11 Players</option>
+                        <option value="15">15 Players</option>
+                        <option value="20">20 Players</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Team Experience Level *</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select experience level...</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="professional">Professional</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="4"
+                        placeholder="Any additional information about your team..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">🚀 Register Team</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="./script.js">
+
+    </script>
+</body>
+
+</html>
