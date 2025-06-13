@@ -17,6 +17,7 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .header-container {
@@ -71,6 +72,25 @@ body {
 .nav-menu a:hover {
     background: #1E90FF;
     color: white;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #1E90FF;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
 }
 
 .container {
@@ -406,20 +426,95 @@ textarea:focus {
     text-align: center;
 }
 
+/* MOBILE STYLES */
 @media (max-width: 768px) {
+
+    /* Improved Mobile Header */
+    .main-header {
+        padding: 15px 0;
+        margin-bottom: 30px;
+    }
+
     .header-container {
-        flex-direction: column;
-        gap: 20px;
         padding: 0 20px;
+        position: relative;
+    }
+
+    .logo-section {
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-toggle {
+        display: flex;
+        z-index: 1001;
     }
 
     .nav-menu {
-        gap: 15px;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 20px;
+        transition: left 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
 
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+        padding: 15px 25px;
+        width: 200px;
+        text-align: center;
+        border-radius: 12px;
+        background: rgba(30, 144, 255, 0.1);
+        margin-bottom: 10px;
+    }
+
+    .nav-menu a:hover {
+        background: #1E90FF;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Animated Menu Toggle */
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Other Mobile Styles */
     .content-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 25px;
     }
 
     .news-grid {
@@ -431,15 +526,118 @@ textarea:focus {
         font-size: 2.2em;
     }
 
+    .hero-section {
+        padding: 35px 25px;
+        margin-bottom: 35px;
+    }
+
     .container {
         padding: 0 20px;
     }
 
     .card {
-        padding: 25px;
+        padding: 25px 20px;
     }
 
     .news-section {
         padding: 30px 20px;
+    }
+
+    /* HORIZONTAL MATCH SCORES ON MOBILE */
+    .match-result {
+        padding: 15px;
+        flex-direction: row;
+        /* Ensure horizontal layout */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .team {
+        flex: 1;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .score {
+        font-size: 1.8em;
+        /* Slightly smaller for mobile */
+        margin: 0 20px;
+        /* Reduced margin for mobile */
+        white-space: nowrap;
+        min-width: 60px;
+        text-align: center;
+    }
+
+    /* Ensure teams don't wrap */
+    .team {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 120px;
+    }
+
+    /* Additional mobile optimizations */
+    .leaderboard-item {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .team-name {
+        font-size: 15px;
+    }
+
+    .points {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .form-section {
+        padding: 25px 20px;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+
+    .submit-btn {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+
+    .card h2 {
+        font-size: 1.6em;
+    }
+
+    .news-section h2 {
+        font-size: 1.6em;
+    }
+
+    .match-result {
+        padding: 12px;
+    }
+
+    .score {
+        font-size: 1.6em;
+        margin: 0 15px;
+    }
+
+    .team {
+        font-size: 13px;
+        max-width: 100px;
     }
 }
